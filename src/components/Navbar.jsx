@@ -11,7 +11,7 @@ const Navbar = () => {
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           {/* <img src="" className="h-8" alt="Logo" /> */}
           <span className="self-center text-[14px] 3xl:text-[18px] font-semibold whitespace-nowrap text-white">
-            BIGBUS SAN FRANCISCO
+          TOURIST PHOTO SAN FRANCISCO
           </span>
         </a>
 
@@ -34,7 +34,7 @@ const Navbar = () => {
                 href="#"
                 className="block font-bold text-[14px] 3xl:text-[18px] py-2 px-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:opacity-60 transition duration-150 md:p-0"
               >
-                FIND A BUS STOP
+                FIND A VENUE
               </a>
             </li>
             <li>

@@ -11,7 +11,7 @@ const Menu = () => {
             href="#"
             class="text-primary text-[14px] 3xl:text-[18px] font-semibold bg-secondary transition-all duration-150 hover:bg-white rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5"
           >
-            BUY TICKETS
+            BOOK A SESSION
           </a>
         </div>
         <div
@@ -25,23 +25,7 @@ const Menu = () => {
                 class="block py-2 px-3 text-[14px] 3xl:text-[18px] font-bold text-white border-b border-dark-red transition-all duration-150 hover:border-white md:border-b md:p-0"
                 aria-current="page"
               >
-                ROUTES & MAPS
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-[14px] 3xl:text-[18px] font-bold text-white border-b border-dark-red transition-all duration-150 hover:border-white md:border-b md:p-0 "
-              >
-                TICKETS & PASSES
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-[14px] 3xl:text-[18px] font-bold text-white border-b border-dark-red transition-all duration-150 hover:border-white md:border-b md:p-0 "
-              >
-                ATTRACTIONS
+                PHOTOSHOOTS VENUES
               </a>
             </li>
             <li>
@@ -49,15 +33,15 @@ const Menu = () => {
                 href="#"
                 class="block py-2 px-3 text-white text-[14px] 3xl:text-[18px] font-bold border-b border-dark-red transition-all duration-150 hover:border-white md:border-b md:p-0 "
               >
-                DISCOVER SAN FRANCISCO
+                FAQs
               </a>
-            </li>{" "}
+            </li>
             <li>
               <a
                 href="#"
                 class="block py-2 px-3 text-white text-[14px] 3xl:text-[18px] font-bold border-b border-dark-red transition-all duration-150 hover:border-white md:border-b md:p-0 "
               >
-                HELP
+                CONTACT
               </a>
             </li>
           </ul>

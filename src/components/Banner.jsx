@@ -21,7 +21,7 @@ const Banner = () => {
               href="#"
               class="w-max bg-secondary text-primary text-[14px] md:text-[16px] font-semibold items-center px-12 py-6 text-sm text-center rounded-md"
             >
-              Book a session
+              BOOK A SESSION
             </a>
             {/* <a
               href="#"
