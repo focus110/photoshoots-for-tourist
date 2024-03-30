@@ -9,31 +9,31 @@ const Banner = () => {
         <div class="p-6">
           <a href="#">
             <h5 class="mb-2 text-[28px] md:text-[45px] text-center md:text-left font-bold tracking-tight text-white">
-              San Francisco Bus Tours
+              Photography Services for San Francisco Tourists
             </h5>
           </a>
           <p class="mb-6 font-normal text-white text-center md:text-left text-[16px] md:text-[26px]">
-            Experience the best of San Francisco on a Hop-on, Hop-off San
-            Francisco Big Bus Tour!
+            Experience San Francisco like never before with our tailored
+            photography services.
           </p>
           <div className="mb-8 flex flex-col md:flex-row justify-start items-center">
             <a
               href="#"
               class="w-max bg-secondary text-primary text-[14px] md:text-[16px] font-semibold items-center px-12 py-6 text-sm text-center rounded-md"
             >
-              BUY TICKETS
+              Book a session
             </a>
-            <a
+            {/* <a
               href="#"
               class="bg-transparent  text-[16px] md:text-[18px] text-secondary font-medium items-center px-3 py-2 text-sm text-center rounded-md"
             >
               Adult tickets from <strong>US$63.00</strong>
-            </a>
+            </a> */}
           </div>
           <ServiceAlert isMobile={false} />
         </div>
         <img
-          className="-mb-8 rounded-md w-[80%] md:w-[400px] xl:w-full object-contain mx-auto"
+          className="-mb-8 rounded-md w-[80%] md:w-[400px] xl:w-[600px] object-contain mx-auto"
           src={design}
           alt="design"
         />

@@ -33,7 +33,7 @@ function App() {
       <Menu />
       <Banner />
       <ServiceAlert isMobile={true} />
-      <ContentMenu />
+      {/* <ContentMenu /> */}
       <Features />
       <Tickets />
     </div>
