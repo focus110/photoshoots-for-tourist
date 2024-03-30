@@ -33,7 +33,7 @@ const Banner = () => {
           <ServiceAlert isMobile={false} />
         </div>
         <img
-          className="-mb-8 rounded-md w-[80%] md:w-[400px] xl:w-[600px] object-contain mx-auto"
+          className="-mb-8 rounded-xl w-[80%] md:w-[400px] xl:w-[600px] object-cover mx-auto"
           src={design}
           alt="design"
         />
