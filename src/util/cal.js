@@ -101,11 +101,11 @@ export const pricing = {
   },
 };
 
-export const calculatePrice = (selectedDate, person) => {
+export const calculatePrice = (selectedDate, person, pricePerPerson) => {
   const selectedDay = format(selectedDate, "EEEE");
   const selectedTime = format(selectedDate, "H:00");
 
   const selectedPrice = pricing[selectedDay]?.[selectedTime];
-  const total = selectedPrice + person * 250;
+  const total = selectedPrice + person * pricePerPerson;
   return total || 0;
 };

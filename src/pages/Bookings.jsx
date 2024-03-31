@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BreadCrumb from "../components/BreadCrumb";
 import { MdOutlineDateRange } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
@@ -10,27 +10,51 @@ import { calculatePrice } from "../util/cal";
 import { Toaster, toast } from "sonner";
 
 const Bookings = () => {
-  const [bookDate, setBookDate] = useState(
-    setHours(setMinutes(new Date(), 0), 7)
-  );
-  const availabilityStartTime = addHours(new Date(), 3);
-  const availabilityEndTime = addHours(new Date(), 14);
+  const [bookDate, setBookDate] = useState(new Date());
+  const availabilityStartTime = addHours(new Date(), 1);
+  const availabilityEndTime = addHours(new Date(), 13);
   const [price, setPrice] = useState(0);
   const [numberOfPeople, setNumberOfPeople] = useState(1);
   const [selectedVenue, setSelectedVenue] = useState("FISHERMAN’S WHARF");
   const [isLoading, setIsLoading] = useState(false);
+  const [pricePerPerson, setPricePerPerson] = useState(0);
+
+  useEffect(() => {
+    const selectedTime = new Date();
+    const minutes = selectedTime.getMinutes();
+
+    if (minutes > 0) {
+      selectedTime.setHours(selectedTime.getHours() - 1, 0, 0, 0);
+    } else {
+      selectedTime.setMinutes(0, 0, 0);
+    }
+
+    const sT = selectedTime.getHours();
+
+    if (sT > 18 || sT < 7) {
+      selectedTime.setHours(7, 0, 0, 0);
+    }
+    setBookDate(selectedTime);
+  }, []);
 
   const handleDateChange = (date) => {
-    setHours(setMinutes(new Date(), 0), 7);
-    setBookDate(date);
-    console.log(date);
-    setPrice(calculatePrice(bookDate, numberOfPeople));
+    const selectedTime = new Date(date);
+    const minutes = selectedTime.getMinutes();
+
+    if (minutes > 0) {
+      selectedTime.setHours(selectedTime.getHours() + 0, 0, 0, 0);
+    } else {
+      selectedTime.setMinutes(0, 0, 0);
+    }
+
+    setBookDate(selectedTime);
+    setPrice(calculatePrice(selectedTime, numberOfPeople, pricePerPerson));
   };
 
   const handleNumberOfPeopleChange = (event) => {
     const newNumberOfPeople = parseInt(event.target.value, 10);
     setNumberOfPeople(newNumberOfPeople);
-    setPrice(calculatePrice(bookDate, numberOfPeople));
+    setPrice(calculatePrice(bookDate, numberOfPeople, pricePerPerson));
   };
 
   const handleVenueSelect = (event) => {
