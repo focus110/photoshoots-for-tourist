@@ -3,9 +3,9 @@ import { AiFillInstagram } from "react-icons/ai";
 import { IoIosCall } from "react-icons/io";
 import { IoMail } from "react-icons/io5";
 
-const Footer = () => {
+const Footer = ({ scrollToSection }) => {
   return (
-    <footer className="bg-primary">
+    <footer id="footer" className="bg-primary">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-8 md:mb-0">
@@ -41,14 +41,20 @@ const Footer = () => {
               </h2>
               <ul className="text-white font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline capitalize">
-                    Photoshoot Venus
-                  </a>
+                  <button
+                    onClick={() => scrollToSection("venues")}
+                    className="hover:underline capitalize"
+                  >
+                    Photoshoot venues
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <button
+                    onClick={() => scrollToSection("faqs")}
+                    className="hover:underline"
+                  >
                     FAQs
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>

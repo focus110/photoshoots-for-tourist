@@ -3,7 +3,10 @@ import Faq from "./Faq";
 
 const Faqs = () => {
   return (
-    <div className="w-full flex flex-col items-center mx-auto xl:max-w-screen-lg px-4 xl:px-36 pb-12">
+    <div
+      id="faqs"
+      className="w-full flex flex-col items-center mx-auto xl:max-w-screen-lg px-4 xl:px-36 pb-12"
+    >
       <h5 className="w-full mb-2 text-[28px] md:text-[45px] text-center font-bold tracking-tight text-primary">
         Faqs
       </h5>

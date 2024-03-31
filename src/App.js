@@ -18,6 +18,11 @@ function App() {
     setIsOpen(!isOpen);
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: "smooth" });
+  };
+
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("no-scroll");
@@ -45,15 +50,20 @@ function App() {
   }, []);
   return (
     <div className="w-full">
-      <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} menuRef={menuRef} />
+      <MobileMenu
+        scrollToSection={scrollToSection}
+        isOpen={isOpen}
+        toggleMenu={toggleMenu}
+        menuRef={menuRef}
+      />
       <Topbar />
       <Navbar toggleMenu={toggleMenu} />
-      <Menu />
+      <Menu scrollToSection={scrollToSection} />
       <Banner />
       <ServiceAlert isMobile={true} />
       <Venues />
       <Faqs />
-      <Footer />
+      <Footer scrollToSection={scrollToSection} />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 
-const MobileMenu = ({ isOpen, toggleMenu, menuRef }) => {
+const MobileMenu = ({ isOpen, toggleMenu, menuRef, scrollToSection }) => {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -32,30 +32,39 @@ const MobileMenu = ({ isOpen, toggleMenu, menuRef }) => {
           <hr className="opacity-20" />
           <ul>
             <li className="p-4">
-              <a
-                href="#"
+              <button
+                onClick={() => {
+                  toggleMenu();
+                  scrollToSection("venues");
+                }}
                 className="block font-bold text-[14px] 3xl:text-[18px] py-2 px-3 text-white md:hover:opacity-60 transition duration-150"
               >
                 PHOTOSHOOTS VENUES
-              </a>
+              </button>
             </li>
             <hr className="opacity-20" />{" "}
             <li className="p-4">
-              <a
-                href="#"
+              <button
+                onClick={() => {
+                  toggleMenu();
+                  scrollToSection("faqs");
+                }}
                 className="block font-bold text-[14px] 3xl:text-[18px] py-2 px-3 text-white md:hover:opacity-60 transition duration-150"
               >
                 FAQs
-              </a>
+              </button>
             </li>
             <hr className="opacity-20" />{" "}
             <li className="p-4">
-              <a
-                href="#"
+              <button
+                onClick={() => {
+                  toggleMenu();
+                  scrollToSection("footer");
+                }}
                 className="block font-bold text-[14px] 3xl:text-[18px] py-2 px-3 text-white md:hover:opacity-60 transition duration-150"
               >
                 CONTACT
-              </a>
+              </button>
             </li>
             <hr className="opacity-20" />
           </ul>
