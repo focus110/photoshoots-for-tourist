@@ -27,20 +27,9 @@ code {
   overflow: hidden;
 }
 
-.custom-datepicker {
-  /* Custom styles */
+.react-datepicker__input-container input {
+  zoom: 1 !important;
 }
-
-/* Styles for date input field */
-.custom-datepicker__input {
-}
-
-/* Styles for the time container */
-.custom-datepicker__time-container {
-}
-
-
-
 
 @tailwind base;
 @tailwind components;
