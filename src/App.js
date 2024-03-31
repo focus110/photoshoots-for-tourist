@@ -47,8 +47,10 @@ function App() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
   return (
     <div className="w-full">
+     
       <MobileMenu
         scrollToSection={scrollToSection}
         isOpen={isOpen}
