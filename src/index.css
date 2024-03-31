@@ -27,6 +27,21 @@ code {
   overflow: hidden;
 }
 
+.custom-datepicker {
+  /* Custom styles */
+}
+
+/* Styles for date input field */
+.custom-datepicker__input {
+}
+
+/* Styles for the time container */
+.custom-datepicker__time-container {
+}
+
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
