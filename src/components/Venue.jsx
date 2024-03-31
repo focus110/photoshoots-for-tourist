@@ -1,10 +1,10 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
-const Venue = ({ img, title, price, cta, hrOfShoot, editedPhotos }) => {
+const Venue = ({ img, title, price, cta, hrOfShoot, editedPhotos, url }) => {
   return (
     <div className=" bg-white border border-gray-200 rounded-lg shadow">
-      <a href="#">
+      <a href={url}>
         <img
           className="rounded-t-lg object-cover w-full h-[260px]"
           src={img}
@@ -20,7 +20,7 @@ const Venue = ({ img, title, price, cta, hrOfShoot, editedPhotos }) => {
           {price}
         </p>
         <a
-          href="#"
+          href={url}
           className="mb-3 w-full font-semibold items-center px-8 py-4 text-sm  text-center border-2 text-primary bg-secondary rounded-lg hover:bg-white transition-all duration-150 hover:text-primary hover:border-primary"
         >
           {cta}

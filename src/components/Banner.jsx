@@ -7,7 +7,7 @@ const Banner = () => {
     <div className="bg-dark-red">
       <div className="mb-16 flex flex-col md:gap-6 mx-auto xl:max-w-screen-2xl md:flex-row px-0 xl:px-36 pt-12">
         <div class="py-6 px-6 md:px-0">
-          <a href="#">
+          <a href="/bookings">
             <h5 class="mb-2 text-[28px] md:text-[45px] text-center md:text-left font-bold tracking-tight text-white">
               Photography Services for San Francisco Tourists
             </h5>
@@ -18,7 +18,7 @@ const Banner = () => {
           </p>
           <div className="mb-8 flex flex-col md:flex-row justify-start items-center">
             <a
-              href="#"
+              href="/bookings"
               class="w-max bg-secondary text-primary text-[14px] md:text-[16px] font-semibold items-center px-12 py-6 text-sm text-center rounded-md"
             >
               BOOK A SESSION

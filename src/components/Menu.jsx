@@ -8,7 +8,7 @@ const Menu = ({ scrollToSection }) => {
         <div></div>
         <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
           <a
-            href="#"
+            href="/bookings"
             class="text-primary text-[14px] 3xl:text-[18px] font-semibold bg-secondary transition-all duration-150 hover:bg-white rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5"
           >
             BOOK A SESSION

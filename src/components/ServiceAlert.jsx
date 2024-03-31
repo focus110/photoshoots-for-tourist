@@ -10,7 +10,7 @@ const ServiceAlert = ({ isMobile }) => {
       }`}
     >
       <a
-        href="#"
+        href="/bookings"
         className={` inline-flex items-center gap-2 rounded-3xl bg-accent-blue border border-white md:border-transparent px-4 py-[1px] text-[14px] text-white`}
       >
         <FaBell className="w-4 h-4" />

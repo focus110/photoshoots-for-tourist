@@ -6,7 +6,10 @@ import Venue from "./Venue";
 
 const Venues = () => {
   return (
-    <div id="venues" className="w-full flex flex-col mx-auto xl:max-w-screen-2xl px-0 xl:px-36 pb-12">
+    <div
+      id="venues"
+      className="w-full flex flex-col mx-auto xl:max-w-screen-2xl px-0 xl:px-36 pb-12"
+    >
       <h5 className="w-full mb-2 text-[28px] md:text-[45px] text-center md:text-left font-bold tracking-tight text-primary">
         VENUES FOR PHOTOSHOOTS
       </h5>
@@ -24,6 +27,7 @@ const Venues = () => {
           cta="BOOK NOW"
           hrOfShoot="1 Hour Shoot"
           editedPhotos="20 Edited Photos"
+          url="/bookings"
         />
         <Venue
           img={ferrybuilding}

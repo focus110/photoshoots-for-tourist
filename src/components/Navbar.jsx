@@ -24,7 +24,7 @@ const Navbar = ({ toggleMenu }) => {
           <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
             <li>
               <a
-                href="#"
+                href="/bookings"
                 className="block font-bold text-[14px] 3xl:text-[18px] text-white py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:opacity-60 transition duration-150 md:p-0 "
                 aria-current="page"
               >
@@ -64,7 +64,7 @@ const Navbar = ({ toggleMenu }) => {
               </button>
               <div
                 id="mega-menu-icons-dropdown"
-                className="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700"
+                className="absolute z-10 hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700"
               ></div>
             </li>
           </ul>
