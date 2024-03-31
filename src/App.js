@@ -5,7 +5,7 @@ import Features from "./components/Features";
 import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";
 import ServiceAlert from "./components/ServiceAlert";
-import Tickets from "./components/Tickets";
+import Venues from "./components/Venues";
 import Topbar from "./components/Topbar";
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
       <ServiceAlert isMobile={true} />
       {/* <ContentMenu /> */}
       {/* <Features /> */}
-      {/* <Tickets /> */}
+      <Venues />
     </div>
   );
 }

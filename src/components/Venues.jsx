@@ -1,16 +1,16 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
-const Tickets = () => {
+const Venues = () => {
   return (
     <div className="w-full flex flex-col mx-auto xl:max-w-screen-2xl px-0 xl:px-36 pb-12">
       <h5 className="w-full mb-2 text-[28px] md:text-[45px] text-center md:text-left font-bold tracking-tight text-primary">
-        Bestselling San Francisco Bus Tour Tickets
+        VENUES FOR PHOTOSHOOTS
       </h5>
 
       <p className="max-w-screen-sm mb-6 font-light text-text-light text-center md:text-left text-[16px] md:text-[20px]">
-        Explore San Francisco the Big Bus way. Get the Essential Ticket for our
-        best value San Francisco sightseeing experience!
+        We capture your journey through the city's iconic landmarks and hidden
+        gems, preserving unforgettable memories for a lifetime.
       </p>
 
       <div className="mt-8 grid md:grid-cols-4 p-4 md:p-0 mx-auto gap-4">
@@ -90,7 +90,6 @@ const Tickets = () => {
             </p>
           </div>
         </div>
-      
         <div className="w-[260px] bg-white border border-gray-200 rounded-lg shadow">
           <a href="#">
             <img
@@ -172,4 +171,4 @@ const Tickets = () => {
   );
 };
 
-export default Tickets;
+export default Venues;
