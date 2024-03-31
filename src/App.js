@@ -1,14 +1,12 @@
 import "./App.css";
-import Banner from "./components/Banner";
 import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";
-import ServiceAlert from "./components/ServiceAlert";
-import Venues from "./components/Venues";
-import Topbar from "./components/Topbar";
-import Faqs from "./components/Faqs";
 import Footer from "./components/Footer";
+import Topbar from "./components/Topbar";
 import { useEffect, useRef, useState } from "react";
 import MobileMenu from "./components/MobileMenu";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Bookings, Home, NoPage } from "./pages";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,10 +57,13 @@ function App() {
       <Topbar />
       <Navbar toggleMenu={toggleMenu} />
       <Menu scrollToSection={scrollToSection} />
-      <Banner />
-      <ServiceAlert isMobile={true} />
-      <Venues />
-      <Faqs />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="bookings" element={<Bookings />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </BrowserRouter>
       <Footer scrollToSection={scrollToSection} />
     </div>
   );
