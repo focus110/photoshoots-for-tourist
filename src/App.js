@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import ServiceAlert from "./components/ServiceAlert";
 import Venues from "./components/Venues";
 import Topbar from "./components/Topbar";
+import Faqs from "./components/Faqs";
 
 function App() {
   document.addEventListener("DOMContentLoaded", function () {
@@ -33,9 +34,8 @@ function App() {
       <Menu />
       <Banner />
       <ServiceAlert isMobile={true} />
-      {/* <ContentMenu /> */}
-      {/* <Features /> */}
       <Venues />
+      <Faqs />
     </div>
   );
 }
