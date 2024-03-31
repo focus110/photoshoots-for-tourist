@@ -1,17 +1,19 @@
 import React from "react";
 import { IoMenu } from "react-icons/io5";
-import { IoLocationSharp } from "react-icons/io5";
 
-const Navbar = () => {
+const Navbar = ({ toggleMenu }) => {
   return (
     <nav className="bg-primary border-gray-200 relative z-[2]">
       <div className="h-[67px] flex flex-wrap items-center justify-between max-w-screen-2xl mx-auto px-4 md:px-16">
-        <IoMenu className="md:hidden h-8 w-8 text-white cursor-pointer" />
+        <IoMenu
+          onClick={toggleMenu}
+          className="md:hidden h-8 w-8 text-white cursor-pointer"
+        />
 
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           {/* <img src="" className="h-8" alt="Logo" /> */}
           <span className="self-center text-[14px] 3xl:text-[18px] font-semibold whitespace-nowrap text-white">
-          TOURIST PHOTO SAN FRANCISCO
+            TOURIST PHOTO SAN FRANCISCO
           </span>
         </a>
 
@@ -68,7 +70,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <IoLocationSharp className="md:hidden h-6 w-6 text-white cursor-pointer" />
+        <div></div>
       </div>
     </nav>
   );

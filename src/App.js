@@ -7,20 +7,47 @@ import Venues from "./components/Venues";
 import Topbar from "./components/Topbar";
 import Faqs from "./components/Faqs";
 import Footer from "./components/Footer";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MobileMenu from "./components/MobileMenu";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <div className="w-full">
-      <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} />
+      <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} menuRef={menuRef} />
       <Topbar />
-      <Navbar />
+      <Navbar toggleMenu={toggleMenu} />
       <Menu />
       <Banner />
       <ServiceAlert isMobile={true} />
