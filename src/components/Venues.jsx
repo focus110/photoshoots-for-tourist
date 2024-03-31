@@ -36,6 +36,7 @@ const Venues = () => {
           cta="BOOK NOW"
           hrOfShoot="1 Hour Shoot"
           editedPhotos="20 Edited Photos"
+          url="/bookings"
         />
         <Venue
           img={golden_gate_bridge}
@@ -44,6 +45,7 @@ const Venues = () => {
           cta="BOOK NOW"
           hrOfShoot="1 Hour Shoot"
           editedPhotos="20 Edited Photos"
+          url="/bookings"
         />
       </div>
     </div>
