@@ -5,8 +5,8 @@ import ServiceAlert from "./ServiceAlert";
 const Banner = () => {
   return (
     <div className="bg-dark-red">
-      <div className="mb-16 flex flex-col mx-auto xl:max-w-screen-2xl md:flex-row px-0 xl:px-36 pt-12">
-        <div class="p-6">
+      <div className="mb-16 flex flex-col md:gap-6 mx-auto xl:max-w-screen-2xl md:flex-row px-0 xl:px-36 pt-12">
+        <div class="py-6 px-6 md:px-0">
           <a href="#">
             <h5 class="mb-2 text-[28px] md:text-[45px] text-center md:text-left font-bold tracking-tight text-white">
               Photography Services for San Francisco Tourists
