@@ -7,7 +7,7 @@ const Faqs = () => {
       <h5 className="w-full mb-2 text-[28px] md:text-[45px] text-center font-bold tracking-tight text-primary">
         Faqs
       </h5>
-      <div>
+      <div className="w-full">
         <Faq
           title="What locations in San Francisco do you offer for photoshoots?"
           description="We offer photoshoots at a variety of iconic locations throughout San Francisco, including the Golden Gate Bridge, Lombard Street, Fisherman's Wharf, and more. Additionally, we can recommend hidden gems and lesser-known spots for a unique experience tailored to your preferences."

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Faq = ({ title, description }) => {
@@ -15,7 +15,11 @@ const Faq = ({ title, description }) => {
         class="flex items-center justify-between gap-2 cursor-pointer font-bold text-text-light text-left md:text-left text-[16px] md:text-[20px]"
       >
         <span> {title}</span>
-        <IoIosArrowDown className="w-8 h-8 text-primary md:w-5 md:h-5 cursor-pointer" />
+        {isOpen ? (
+          <IoIosArrowDown className="w-8 h-8 text-primary md:w-5 md:h-5 cursor-pointer" />
+        ) : (
+          <IoIosArrowUp className="w-8 h-8 text-primary md:w-5 md:h-5 cursor-pointer" />
+        )}
       </h3>
       <AnimatePresence>
         {isOpen && (
@@ -28,7 +32,7 @@ const Faq = ({ title, description }) => {
           >
             {description}
           </motion.p>
-        )}{" "}
+        )}
       </AnimatePresence>
     </div>
   );
