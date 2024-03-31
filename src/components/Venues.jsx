@@ -8,13 +8,13 @@ const Venues = () => {
   return (
     <div
       id="venues"
-      className="w-full flex flex-col mx-auto xl:max-w-screen-2xl px-0 xl:px-36 pb-12"
+      className="w-full flex flex-col mx-auto xl:max-w-screen-2xl px-4 xl:px-36 pb-12"
     >
-      <h5 className="w-full mb-2 text-[28px] md:text-[45px] text-center md:text-left font-bold tracking-tight text-primary">
+      <h5 className="w-full mb-2 text-[28px] md:text-[28px] xl:text-[45px] text-center md:text-left font-bold tracking-tight text-primary">
         VENUES FOR PHOTOSHOOTS
       </h5>
 
-      <p className="max-w-screen-sm mb-6 font-light text-text-light text-center md:text-left text-[16px] md:text-[20px]">
+      <p className="max-w-screen-sm mb-6 font-light text-text-light text-center md:text-left text-[16px] md:text-[20px] xl:text-[26px]]">
         We capture your journey through the city's iconic landmarks and hidden
         gems, preserving unforgettable memories for a lifetime.
       </p>

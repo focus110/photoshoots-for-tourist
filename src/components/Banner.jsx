@@ -5,14 +5,14 @@ import ServiceAlert from "./ServiceAlert";
 const Banner = () => {
   return (
     <div className="bg-dark-red">
-      <div className="mb-16 flex flex-col md:gap-6 mx-auto xl:max-w-screen-2xl md:flex-row px-0 xl:px-36 pt-12">
+      <div className="mb-16 flex flex-col md:gap-6 mx-auto xl:max-w-screen-2xl md:flex-row px-4 xl:px-36 pt-12">
         <div class="py-6 px-6 md:px-0">
           <a href="/bookings">
-            <h5 class="mb-2 text-[28px] md:text-[45px] text-center md:text-left font-bold tracking-tight text-white">
+            <h5 class="mb-2 text-[28px] md:text-[28px] xl:text-[45px] text-center md:text-left font-bold tracking-tight text-white">
               Photography Services for San Francisco Tourists
             </h5>
           </a>
-          <p class="mb-6 font-normal text-white text-center md:text-left text-[16px] md:text-[26px]">
+          <p class="mb-6 font-normal text-white text-center md:text-left text-[16px] md:text-[20px] xl:text-[26px]">
             Experience San Francisco like never before with our tailored
             photography services.
           </p>
@@ -33,7 +33,7 @@ const Banner = () => {
           <ServiceAlert isMobile={false} />
         </div>
         <img
-          className="-mb-8 rounded-xl w-[80%] md:w-[400px] xl:w-[600px] object-cover mx-auto"
+          className="-mb-8 rounded-xl sm:h-[] w-[80%] md:w-[400px] xl:w-[600px] object-cover mx-auto"
           src={design}
           alt="design"
         />
