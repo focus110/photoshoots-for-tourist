@@ -16,7 +16,7 @@ const MobileMenu = ({ isOpen, toggleMenu, menuRef, scrollToSection }) => {
         >
           <div className="px-4 py-8 flex items-center justify-between">
             <a
-              href="#"
+              href="/"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
               {/* <img src="" className="h-8" alt="Logo" /> */}
