@@ -25,9 +25,9 @@ const ContentMenu = () => {
       <button
         id="features"
         type="button"
-        class={`${
+        className={`${
           isActive === "FEATURES"
-            ? "bg-dark-red text-white"
+            ? "bg-dark-primary text-white"
             : "bg-accent-light text-primary hover:border-primary hover:bg-white"
         } font-semibold border-2 rounded-lg text-sm px-5 py-2.5 me-2 mb-2`}
       >
@@ -35,9 +35,9 @@ const ContentMenu = () => {
       </button>
       <button
         type="button"
-        class={`${
+        className={`${
           isActive === "TICKETS"
-            ? "bg-dark-red text-white"
+            ? "bg-dark-primary text-white"
             : "bg-accent-light text-primary hover:border-primary hover:bg-white"
         } font-semibold border-2 rounded-lg text-sm px-5 py-2.5 me-2 mb-2`}
       >
@@ -45,9 +45,9 @@ const ContentMenu = () => {
       </button>
       <button
         type="button"
-        class={`${
+        className={`${
           isActive === "ROUTES"
-            ? "bg-dark-red text-white"
+            ? "bg-dark-primary text-white"
             : "bg-accent-light text-primary hover:border-primary hover:bg-white"
         } font-semibold border-2 rounded-lg text-sm px-5 py-2.5 me-2 mb-2`}
       >

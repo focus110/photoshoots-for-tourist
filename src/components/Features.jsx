@@ -11,13 +11,13 @@ const Features = () => {
   return (
     <div id="feature">
       <div className="flex flex-col mx-auto xl:max-w-screen-2xl md:flex-row px-0 xl:px-28">
-        <div class="p-6 md:w-[50%]">
+        <div className="p-6 md:w-[50%]">
           <a href="#">
-            <h5 class="mb-2 text-[28px] md:text-[45px] text-center md:text-left font-bold tracking-tight text-primary">
+            <h5 className="mb-2 text-[28px] md:text-[45px] text-center md:text-left font-bold tracking-tight text-primary">
               Why Book a San Francisco Bus Tour?
             </h5>
           </a>
-          <p class="mb-6 font-light text-text-light text-center md:text-left text-[16px] md:text-[20px]">
+          <p className="mb-6 font-light text-text-light text-center md:text-left text-[16px] md:text-[20px]">
             Our San Francisco bus tours offer the perfect introduction to this
             colourful city and the best photo opportunities of iconic landmarks
             from the top deck.
@@ -33,7 +33,7 @@ const Features = () => {
               <IoBusOutline className="w-16 h-16 text-primary" />
               <MdOutlineQuestionMark className="absolute text-white rounded-full bottom-0 right-0 bg-accent-blue" />
             </div>
-            <p class="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
+            <p className="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
               Open-top Buses
             </p>
           </div>
@@ -42,7 +42,7 @@ const Features = () => {
               <CiHeadphones className="w-16 h-16 text-primary" />
               <MdOutlineQuestionMark className="absolute text-white rounded-full bottom-0 right-0 bg-accent-blue" />
             </div>
-            <p class="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
+            <p className="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
               CiHeadphones
             </p>
           </div>{" "}
@@ -51,7 +51,7 @@ const Features = () => {
               <CiMobile2 className="w-16 h-16 text-primary" />
               <MdOutlineQuestionMark className="absolute text-white rounded-full bottom-0 right-0 bg-accent-blue" />
             </div>
-            <p class="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
+            <p className="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
               Free Mobile App
             </p>
           </div>
@@ -60,7 +60,7 @@ const Features = () => {
               <LuLandmark className="w-16 h-16 text-primary" />
               <MdOutlineQuestionMark className="absolute text-white rounded-full bottom-0 right-0 bg-accent-blue" />
             </div>
-            <p class="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
+            <p className="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
               See all the Top Landmarks
             </p>
           </div>
@@ -69,7 +69,7 @@ const Features = () => {
               <CiCloudSun className="w-16 h-16 text-primary" />
               <MdOutlineQuestionMark className="absolute text-white rounded-full bottom-0 right-0 bg-accent-blue" />
             </div>
-            <p class="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
+            <p className="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
               Day & Night Tours
             </p>
           </div>
@@ -78,7 +78,7 @@ const Features = () => {
               <LuLandmark className="w-16 h-16 text-primary" />
               <MdOutlineQuestionMark className="absolute text-white rounded-full bottom-0 right-0 bg-accent-blue" />
             </div>
-            <p class="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
+            <p className="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
               Private Hires
             </p>
           </div>
@@ -87,7 +87,7 @@ const Features = () => {
               <LuFerrisWheel className="w-16 h-16 text-primary" />
               <MdOutlineQuestionMark className="absolute text-white rounded-full bottom-0 right-0 bg-accent-blue" />
             </div>
-            <p class="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
+            <p className="mb-6 font-medium text-text-light text-center md:text-left text-[14px] md:text-[16px]">
               $5000 PRIZE GIVEAWAY
             </p>
           </div>

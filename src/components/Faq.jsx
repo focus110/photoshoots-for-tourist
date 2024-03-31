@@ -12,7 +12,7 @@ const Faq = ({ title, description }) => {
     <div className="py-5">
       <h3
         onClick={toggleOpen}
-        class="flex items-center justify-between gap-2 cursor-pointer font-bold text-text-light text-left md:text-left text-[16px] md:text-[20px]"
+        className="flex items-center justify-between gap-2 cursor-pointer font-bold text-text-light text-left md:text-left text-[16px] md:text-[20px]"
       >
         <span> {title}</span>
         {isOpen ? (

@@ -13,23 +13,24 @@ const Bookings = () => {
   const [bookDate, setBookDate] = useState(
     setHours(setMinutes(new Date(), 0), 7)
   );
-  const availabilityStartTime = addHours(new Date(), 5);
-  const availabilityEndTime = addHours(new Date(), 16);
+  const availabilityStartTime = addHours(new Date(), 3);
+  const availabilityEndTime = addHours(new Date(), 14);
   const [price, setPrice] = useState(0);
   const [numberOfPeople, setNumberOfPeople] = useState(1);
   const [selectedVenue, setSelectedVenue] = useState("FISHERMAN’S WHARF");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleDateChange = (date) => {
-    const newDate = setHours(setMinutes(date, 0), 7);
+    setHours(setMinutes(new Date(), 0), 7);
     setBookDate(date);
+    console.log(date);
     setPrice(calculatePrice(bookDate, numberOfPeople));
   };
 
   const handleNumberOfPeopleChange = (event) => {
-    const newNumberOfPeople = parseInt(event.target.value, 10); // Parse the input value as an integer
+    const newNumberOfPeople = parseInt(event.target.value, 10);
     setNumberOfPeople(newNumberOfPeople);
-    setPrice(calculatePrice(bookDate, numberOfPeople)); // Recalculate price when the number of people changes
+    setPrice(calculatePrice(bookDate, numberOfPeople));
   };
 
   const handleVenueSelect = (event) => {
@@ -49,7 +50,7 @@ const Bookings = () => {
       <Toaster richColors />
       <BreadCrumb current="Bookings" />
       <div className=" flex flex-col md:flex-row justify-between mt-8">
-        <div className=" md:w-[70%]">
+        <div className=" md:w-[70%] mb-8">
           <h5 className="w-full mb-2 text-[26px] md:text-[20px] text-left font-bold tracking-tight text-text-light">
             Bookings
           </h5>
@@ -86,19 +87,19 @@ const Bookings = () => {
           <label className="block mb-2 text-sm font-medium text-text-light ">
             Select Date
           </label>
-          <div className="w-[300px] flex flex-col items-center h-[360px]">
+          <div className="w-[300px] flex flex-col items-center ">
             <DatePicker
               selected={bookDate}
               showTimeSelect
               dateFormat="Pp"
-              onChange={(date) => handleDateChange(date)}
+              onChange={handleDateChange}
               timeIntervals={60}
               minTime={availabilityStartTime}
               maxTime={availabilityEndTime}
+              minDate={new Date()}
               className="w-[300px] bg-gray-50 border border-gray-300 text-text-light text-sm rounded-lg block p-2.5 "
             />
           </div>
-          {/* <Calender /> */}
         </div>
         <div className="md:w-[30%] shadow-md p-4 border">
           <h5 className="w-full mb-2 text-[26px] md:text-[20px] text-left font-bold tracking-tight text-text-light">
@@ -151,7 +152,7 @@ const Bookings = () => {
               <div className="text-center">
                 <svg
                   aria-hidden="true"
-                  class="w-6 h-6 mx-auto animate-spin fill-primary"
+                  className="w-6 h-6 mx-auto animate-spin fill-primary"
                   viewBox="0 0 100 101"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"

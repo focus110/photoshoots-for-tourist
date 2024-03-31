@@ -10,7 +10,7 @@ module.exports = {
         "accent-blue": "#337ab7",
         "accent-red": "#b31642",
         "accent-green": "#02a64f",
-        "dark-red": "#2f1a8d",
+        "dark-primary": "#2f1a8d",
         "text-light": "#444444",
         "text-dark": "#333333",
       },

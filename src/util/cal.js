@@ -101,14 +101,11 @@ export const pricing = {
   },
 };
 
-// Function to calculate the price based on the selected date and time
 export const calculatePrice = (selectedDate, person) => {
-  const selectedDay = format(selectedDate, "EEEE"); // Get the day of the week (e.g., "Sunday")
-  const selectedTime = format(selectedDate, "H:00"); // Get the time in hour format (e.g., "7:00")
+  const selectedDay = format(selectedDate, "EEEE");
+  const selectedTime = format(selectedDate, "H:00");
 
-  // Retrieve the price from the pricing mapping
   const selectedPrice = pricing[selectedDay]?.[selectedTime];
   const total = selectedPrice + person * 250;
-  // If a price is found, update the state, otherwise set it to 0
   return total || 0;
 };
