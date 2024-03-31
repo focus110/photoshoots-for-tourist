@@ -65,7 +65,7 @@ const Bookings = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-      toast.error("Comming soon...");
+      toast.error("Coming soon...");
     }, 3000);
   };
 
