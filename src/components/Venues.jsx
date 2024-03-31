@@ -1,5 +1,8 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import wharf from "../assets/Wharf.jpg";
+import ferrybuilding from "../assets/ferrybuilding.jpg";
+import golden_gate_bridge from "../assets/golden_gate_bridge.webp";
 
 const Venues = () => {
   return (
@@ -13,156 +16,118 @@ const Venues = () => {
         gems, preserving unforgettable memories for a lifetime.
       </p>
 
-      <div className="mt-8 grid md:grid-cols-4 p-4 md:p-0 mx-auto gap-4">
-        <div className="w-[260px] bg-white border border-gray-200 rounded-lg shadow">
+      <div className="mt-8 grid md:grid-cols-3 p-4 md:p-0 mx-auto gap-4">
+        <div className=" bg-white border border-gray-200 rounded-lg shadow">
           <a href="#">
             <img
-              className="rounded-t-lg"
-              src="https://cdn.pixabay.com/photo/2014/04/05/11/29/athens-315833_960_720.jpg"
+              className="rounded-t-lg object-cover w-full h-[260px]"
+              src={wharf}
               alt=""
             />
           </a>
           <h4 className="font-semibold text-center bg-secondary p-4 text-white">
-            Essential Ticket
+            FISHERMAN’S WHARF
           </h4>
 
           <div className="p-5 grid items-center bg-accent-light pb-8">
-            <p className="text-text-light font-extralight text-center mb-2">
-              Adult from <strong>US$79.70</strong>
+            <p className="text-text-light text-2xl font-bold text-center mb-2">
+              $269,00
             </p>
             <a
               href="#"
-              className="mb-3 w-full font-semibold items-center px-8 py-4 text-sm  text-center border-2 text-primary bg-secondary rounded-lg hover:bg-white hover:text-primary hover:border-primary"
+              className="mb-3 w-full font-semibold items-center px-8 py-4 text-sm  text-center border-2 text-primary bg-secondary rounded-lg hover:bg-white transition-all duration-150 hover:text-primary hover:border-primary"
             >
-              BUY NOW
+              BOOK NOW
             </a>
             <div className="m-auto p-2 text-white rounded-lg bg-primary w-max mb-3">
-              2Days
+              1 Hour Shoot
             </div>
             <p className="text-text-light font-semibold mb-2">
               What's included{" "}
             </p>
             <p className="mb-1 inline-flex items-start gap-2 text-text-light font-light">
               <FaCheckCircle className="w-4 h-4 text-accent-green rounded-full" />
-              2-Day Hop-on, Hop-off Bus Tour Ticket
+              1 Hour Shoot
             </p>{" "}
             <p className="mb-1 inline-flex items-start gap-2 text-text-light font-light">
               <FaCheckCircle className="w-4 h-4 text-accent-green rounded-full" />
-              Fully Flexible Bus Ticket (free date change)
+              20 Edited Photos
             </p>
           </div>
         </div>
-        <div className="w-[260px] bg-white border border-gray-200 rounded-lg shadow">
+        <div className=" bg-white border border-gray-200 rounded-lg shadow">
           <a href="#">
             <img
-              className="rounded-t-lg"
-              src="https://cdn.pixabay.com/photo/2014/04/05/11/29/athens-315833_960_720.jpg"
+              className="rounded-t-lg object-cover w-full h-[260px]"
+              src={ferrybuilding}
               alt=""
             />
           </a>
           <h4 className="font-semibold text-center bg-gray-500 p-4 text-white">
-            Explore Ticket
+            FERRY BUILDING
           </h4>
 
           <div className="p-5 grid items-center bg-accent-light pb-8">
-            <p className="text-text-light font-extralight text-center mb-2">
-              Adult from <strong>US$65.70</strong>
+            <p className="text-text-light text-2xl font-bold text-center mb-2">
+              $399,00
             </p>
             <a
               href="#"
-              className="mb-3 w-full font-semibold items-center px-8 py-4 text-sm  text-center border-2 text-primary bg-secondary rounded-lg hover:bg-white hover:text-primary hover:border-primary"
+              className="mb-3 w-full font-semibold items-center px-8 py-4 text-sm  text-center border-2 text-primary bg-secondary rounded-lg hover:bg-white transition-all duration-150 hover:text-primary hover:border-primary"
             >
-              BUY NOW
+              BOOK NOW
             </a>
             <div className="m-auto p-2 text-white rounded-lg bg-primary w-max mb-3">
-              2Days
+              1 Hour Shoot
             </div>
             <p className="text-text-light font-semibold mb-2">
               What's included{" "}
             </p>
             <p className="mb-1 inline-flex items-start gap-2 text-text-light font-light">
               <FaCheckCircle className="w-4 h-4 text-accent-green rounded-full" />
-              2-Day Hop-on, Hop-off Bus Tour Ticket
+              1 Hour Shoot
             </p>{" "}
             <p className="mb-1 inline-flex items-start gap-2 text-text-light font-light">
               <FaCheckCircle className="w-4 h-4 text-accent-green rounded-full" />
-              Fully Flexible Bus Ticket (free date change)
+              20 Edited Photos
             </p>
           </div>
         </div>
-        <div className="w-[260px] bg-white border border-gray-200 rounded-lg shadow">
+        <div className=" bg-white border border-gray-200 rounded-lg shadow">
           <a href="#">
             <img
-              className="rounded-t-lg"
-              src="https://cdn.pixabay.com/photo/2014/04/05/11/29/athens-315833_960_720.jpg"
+              className="rounded-t-lg object-cover w-full h-[260px]"
+              src={golden_gate_bridge}
               alt=""
             />
           </a>
           <h4 className="font-semibold text-center bg-purple-500 p-4 text-white">
-            Explore Ticket + Alcatraz
+            GOLDEN GATE BRIDGE
           </h4>
 
           <div className="p-5 grid items-center bg-accent-light pb-8">
-            <p className="text-text-light font-extralight text-center mb-2">
-              Adult from <strong>US$120</strong>
+            <p className="text-text-light text-2xl font-bold text-center mb-2">
+              $599,00
             </p>
             <a
               href="#"
-              className="mb-3 w-full font-semibold items-center px-8 py-4 text-sm  text-center border-2 text-primary bg-secondary rounded-lg hover:bg-white hover:text-primary hover:border-primary"
+              className="mb-3 w-full font-semibold items-center px-8 py-4 text-sm  text-center border-2 text-primary bg-secondary rounded-lg hover:bg-white transition-all duration-150 hover:text-primary hover:border-primary"
             >
-              BUY NOW
+              BOOK NOW
             </a>
             <div className="m-auto p-2 text-white rounded-lg bg-primary w-max mb-3">
-              2Days
+              1 Hour Shoot
             </div>
             <p className="text-text-light font-semibold mb-2">
               What's included{" "}
             </p>
             <p className="mb-1 inline-flex items-start gap-2 text-text-light font-light">
               <FaCheckCircle className="w-4 h-4 text-accent-green rounded-full" />
-              2-Day Hop-on, Hop-off Bus Tour Ticket
+              1 Hour Shoot
             </p>{" "}
             <p className="mb-1 inline-flex items-start gap-2 text-text-light font-light">
               <FaCheckCircle className="w-4 h-4 text-accent-green rounded-full" />
-              Fully Flexible Bus Ticket (free date change)
-            </p>
-          </div>
-        </div>{" "}
-        <div className="w-[260px] bg-white border border-gray-200 rounded-lg shadow">
-          <a href="#">
-            <img
-              className="rounded-t-lg"
-              src="https://cdn.pixabay.com/photo/2014/04/05/11/29/athens-315833_960_720.jpg"
-              alt=""
-            />
-          </a>
-          <h4 className="font-semibold text-center bg-purple-500 p-4 text-white">
-            Wine Country Tour
-          </h4>
-
-          <div className="p-5 grid items-center bg-accent-light pb-8">
-            <p className="text-text-light font-extralight text-center mb-2">
-              Adult from <strong>US$120</strong>
-            </p>
-            <a
-              href="#"
-              className="mb-3 w-full font-semibold items-center px-8 py-4 text-sm  text-center border-2 text-primary bg-secondary rounded-lg hover:bg-white hover:text-primary hover:border-primary"
-            >
-              BUY NOW
-            </a>
-            <div className="m-auto p-2 text-white rounded-lg bg-primary w-max mb-3">
-              2Days
-            </div>
-            <p className="text-text-light font-semibold mb-2">
-              What's included{" "}
-            </p>
-            <p className="mb-1 inline-flex items-start gap-2 text-text-light font-light">
-              <FaCheckCircle className="w-4 h-4 text-accent-green rounded-full" />
-              2-Day Hop-on, Hop-off Bus Tour Ticket
-            </p>{" "}
-            <p className="mb-1 inline-flex items-start gap-2 text-text-light font-light">
-              <FaCheckCircle className="w-4 h-4 text-accent-green rounded-full" />
-              Fully Flexible Bus Ticket (free date change)
+              20 Edited Photos
             </p>
           </div>
         </div>
