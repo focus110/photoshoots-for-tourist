@@ -18,7 +18,8 @@ function App() {
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: "smooth" });
+    if (section.scrollIntoView({ behavior: "smooth" }))
+      section.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
