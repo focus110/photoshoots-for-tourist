@@ -24,10 +24,10 @@ const Faq = ({ title, description }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
+            initial={{ height: 0, opacity: 0 }}
+            exit={{ height: 0, opacity: 0 }}
+            animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className="max-w-screen-sm mb-6 font-light text-text-light text-left md:text-left text-[16px] md:text-[18px] mt-3"
           >
             {description}

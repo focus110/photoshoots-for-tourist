@@ -1,34 +1,24 @@
 import "./App.css";
 import Banner from "./components/Banner";
-import ContentMenu from "./components/ContentMenu";
-import Features from "./components/Features";
 import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";
 import ServiceAlert from "./components/ServiceAlert";
 import Venues from "./components/Venues";
 import Topbar from "./components/Topbar";
 import Faqs from "./components/Faqs";
+import Footer from "./components/Footer";
+import { useState } from "react";
+import MobileMenu from "./components/MobileMenu";
 
 function App() {
-  document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
+  const [isOpen, setIsOpen] = useState(false);
 
-    sections.forEach((section) => {
-      section.addEventListener("click", scrollToSection);
-    });
-
-    function scrollToSection() {
-      const targetId = this.getAttribute("id");
-      const targetSection = document.getElementById(targetId);
-
-      // Scroll smoothly to the target section
-      targetSection.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  });
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div className="w-full">
+      <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} />
       <Topbar />
       <Navbar />
       <Menu />
@@ -36,6 +26,7 @@ function App() {
       <ServiceAlert isMobile={true} />
       <Venues />
       <Faqs />
+      <Footer />
     </div>
   );
 }
