@@ -11,14 +11,29 @@ import { Toaster, toast } from "sonner";
 
 const Bookings = () => {
   const [bookDate, setBookDate] = useState(new Date());
-  const availabilityStartTime = addHours(new Date(), -3);
-  const availabilityEndTime = addHours(new Date(), 9);
   const [price, setPrice] = useState(0);
   const [numberOfPeople, setNumberOfPeople] = useState(1);
   const [selectedVenue, setSelectedVenue] = useState("FISHERMAN’S WHARF");
   const [isLoading, setIsLoading] = useState(false);
   const [pricePerPerson, setPricePerPerson] = useState(0);
   const [calenderTime, setCalenderTime] = useState("");
+
+  
+  
+  const setMinTime = (date) => {
+    const hours = 6;
+    const newDate = new Date(date);
+    newDate.setHours(hours);
+    return newDate;
+  };
+
+  const setMaxTime = (date) => {
+    const hours = 18;
+    const newDate = new Date(date);
+    newDate.setHours(hours);
+    return newDate;
+  };
+
 
   useEffect(() => {
     const selectedTime = new Date();
@@ -80,7 +95,7 @@ const Bookings = () => {
       bookDate.getHours().toString().padStart(2, "0") + ":00";
     const price = getPriceForDayAndTime(formattedDay, formattedHour);
 
-    console.log(formattedHour);
+  
     return (
       <div className="grid rounded">
         <span className="mb-[2px]">{day}</span>
@@ -88,8 +103,8 @@ const Bookings = () => {
       </div>
     );
   };
+
   const getPriceForDayAndTime = (day, time) => {
-    console.log(pricing[day][time]);
     return pricing[day][time];
   };
 
@@ -142,8 +157,8 @@ const Bookings = () => {
               dateFormat="Pp"
               onChange={handleDateChange}
               timeIntervals={60}
-              minTime={availabilityStartTime}
-              maxTime={availabilityEndTime}
+              minTime={setMinTime(new Date())}
+              maxTime={setMaxTime(new Date())}
               minDate={new Date()}
               className="w-[300px] bg-gray-50 border border-gray-300 text-text-light text-sm rounded-lg block p-2.5 "
               renderDayContents={renderCustomDayContents}
