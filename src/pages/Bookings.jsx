@@ -5,7 +5,7 @@ import { FaRegClock } from "react-icons/fa";
 import { GrLocation } from "react-icons/gr";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { format, addHours, setHours, setMinutes } from "date-fns";
+import { format, addHours } from "date-fns";
 import { calculatePrice, pricing } from "../util/cal";
 import { Toaster, toast } from "sonner";
 
