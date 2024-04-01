@@ -18,8 +18,8 @@ function App() {
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
-    if (section.scrollIntoView({ behavior: "smooth" }))
-      section.scrollIntoView({ behavior: "smooth" });
+    if (section?.scrollIntoView({ behavior: "smooth" }))
+      section?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -50,7 +50,6 @@ function App() {
 
   return (
     <div className="w-full">
-     
       <MobileMenu
         scrollToSection={scrollToSection}
         isOpen={isOpen}

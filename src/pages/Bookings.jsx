@@ -6,18 +6,19 @@ import { GrLocation } from "react-icons/gr";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format, addHours, setHours, setMinutes } from "date-fns";
-import { calculatePrice } from "../util/cal";
+import { calculatePrice, pricing } from "../util/cal";
 import { Toaster, toast } from "sonner";
 
 const Bookings = () => {
   const [bookDate, setBookDate] = useState(new Date());
-  const availabilityStartTime = addHours(new Date(), 1);
-  const availabilityEndTime = addHours(new Date(), 13);
+  const availabilityStartTime = addHours(new Date(), -3);
+  const availabilityEndTime = addHours(new Date(), 9);
   const [price, setPrice] = useState(0);
   const [numberOfPeople, setNumberOfPeople] = useState(1);
   const [selectedVenue, setSelectedVenue] = useState("FISHERMAN’S WHARF");
   const [isLoading, setIsLoading] = useState(false);
   const [pricePerPerson, setPricePerPerson] = useState(0);
+  const [calenderTime, setCalenderTime] = useState("");
 
   useEffect(() => {
     const selectedTime = new Date();
@@ -32,17 +33,21 @@ const Bookings = () => {
     const sT = selectedTime.getHours();
 
     if (sT > 18 || sT < 7) {
-      selectedTime.setHours(7, 0, 0, 0);
+      selectedTime.setHours(12, 0, 0, 0);
     }
     setBookDate(selectedTime);
   }, []);
+
+  useEffect(() => {
+    setCalenderTime(format(bookDate, "h:mm a"));
+  }, [bookDate]);
 
   const handleDateChange = (date) => {
     const selectedTime = new Date(date);
     const minutes = selectedTime.getMinutes();
 
     if (minutes > 0) {
-      selectedTime.setHours(selectedTime.getHours() + 0, 0, 0, 0);
+      selectedTime.setHours(12, 0, 0, 0);
     } else {
       selectedTime.setMinutes(0, 0, 0);
     }
@@ -67,6 +72,25 @@ const Bookings = () => {
       setIsLoading(false);
       toast.error("Coming soon...");
     }, 3000);
+  };
+
+  const renderCustomDayContents = (day, date) => {
+    const formattedDay = date.toLocaleDateString("en-US", { weekday: "long" });
+    const formattedHour =
+      bookDate.getHours().toString().padStart(2, "0") + ":00";
+    const price = getPriceForDayAndTime(formattedDay, formattedHour);
+
+    console.log(formattedHour);
+    return (
+      <div className="grid rounded">
+        <span className="mb-[2px]">{day}</span>
+        <span className="-mt-2 text-xs">${price}</span>
+      </div>
+    );
+  };
+  const getPriceForDayAndTime = (day, time) => {
+    console.log(pricing[day][time]);
+    return pricing[day][time];
   };
 
   return (
@@ -122,6 +146,7 @@ const Bookings = () => {
               maxTime={availabilityEndTime}
               minDate={new Date()}
               className="w-[300px] bg-gray-50 border border-gray-300 text-text-light text-sm rounded-lg block p-2.5 "
+              renderDayContents={renderCustomDayContents}
             />
           </div>
         </div>
@@ -200,3 +225,5 @@ const Bookings = () => {
 };
 
 export default Bookings;
+
+
